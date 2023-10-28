@@ -57,7 +57,7 @@ TRACKS X 1700 DO 46 STEP 3400 LAYER met5 ;
 TRACKS Y 1700 DO 33 STEP 3400 LAYER met5 ;
 COMPONENTS 0 ;
 END COMPONENTS
-PINS 51 ;
+PINS 43 ;
     - clk + NET clk + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER met4 ( -150 -500 ) ( 150 500 )
@@ -70,38 +70,6 @@ PINS 51 ;
       + PORT
         + LAYER met4 ( -150 -500 ) ( 150 500 )
         + PLACED ( 132020 111020 ) N ;
-    - ua[0] + NET ua[0] + DIRECTION INOUT + USE SIGNAL
-      + PORT
-        + LAYER met4 ( -300 -500 ) ( 300 500 )
-        + PLACED ( 152260 500 ) N ;
-    - ua[1] + NET ua[1] + DIRECTION INOUT + USE SIGNAL
-      + PORT
-        + LAYER met4 ( -300 -500 ) ( 300 500 )
-        + PLACED ( 131100 500 ) N ;
-    - ua[2] + NET ua[2] + DIRECTION INOUT + USE SIGNAL
-      + PORT
-        + LAYER met4 ( -300 -500 ) ( 300 500 )
-        + PLACED ( 109940 500 ) N ;
-    - ua[3] + NET ua[3] + DIRECTION INOUT + USE SIGNAL
-      + PORT
-        + LAYER met4 ( -300 -500 ) ( 300 500 )
-        + PLACED ( 88780 500 ) N ;
-    - ua[4] + NET ua[4] + DIRECTION INOUT + USE SIGNAL
-      + PORT
-        + LAYER met4 ( -300 -500 ) ( 300 500 )
-        + PLACED ( 67620 500 ) N ;
-    - ua[5] + NET ua[5] + DIRECTION INOUT + USE SIGNAL
-      + PORT
-        + LAYER met4 ( -300 -500 ) ( 300 500 )
-        + PLACED ( 46460 500 ) N ;
-    - ua[6] + NET ua[6] + DIRECTION INOUT + USE SIGNAL
-      + PORT
-        + LAYER met4 ( -300 -500 ) ( 300 500 )
-        + PLACED ( 25300 500 ) N ;
-    - ua[7] + NET ua[7] + DIRECTION INOUT + USE SIGNAL
-      + PORT
-        + LAYER met4 ( -300 -500 ) ( 300 500 )
-        + PLACED ( 4140 500 ) N ;
     - ui_in[0] + NET ui_in[0] + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER met4 ( -150 -500 ) ( 150 500 )
@@ -267,18 +235,10 @@ SPECIALNETS 2 ;
     - VGND + USE GROUND ;
     - VPWR + USE POWER ;
 END SPECIALNETS
-NETS 51 ;
+NETS 43 ;
     - clk ( PIN clk ) + USE SIGNAL ;
     - ena ( PIN ena ) + USE SIGNAL ;
     - rst_n ( PIN rst_n ) + USE SIGNAL ;
-    - ua[0] ( PIN ua[0] ) + USE SIGNAL ;
-    - ua[1] ( PIN ua[1] ) + USE SIGNAL ;
-    - ua[2] ( PIN ua[2] ) + USE SIGNAL ;
-    - ua[3] ( PIN ua[3] ) + USE SIGNAL ;
-    - ua[4] ( PIN ua[4] ) + USE SIGNAL ;
-    - ua[5] ( PIN ua[5] ) + USE SIGNAL ;
-    - ua[6] ( PIN ua[6] ) + USE SIGNAL ;
-    - ua[7] ( PIN ua[7] ) + USE SIGNAL ;
     - ui_in[0] ( PIN ui_in[0] ) + USE SIGNAL ;
     - ui_in[1] ( PIN ui_in[1] ) + USE SIGNAL ;
     - ui_in[2] ( PIN ui_in[2] ) + USE SIGNAL ;
