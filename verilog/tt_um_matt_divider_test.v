@@ -1,4 +1,4 @@
-module tt_um_tt05_analog_test (VGND,
+module tt_um_matt_divider_test (VGND,
     VPWR,
     clk,
     ena,
