@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1698513114
+timestamp 1698571942
 << via2 >>
 rect 7108 9788 7278 9944
 rect 7558 9820 7729 9975
@@ -128,9 +128,9 @@ rect 3836 299 6395 9637
 rect 8746 9484 13864 9801
 rect 11305 424 13864 9484
 use divider  divider_1
-timestamp 1698509327
+timestamp 1698571942
 transform 1 0 7612 0 1 8975
-box -542 -22 1420 1054
+box -542 -349 1420 1054
 << labels >>
 flabel metal4 s 13463 11052 13493 11152 0 FreeSans 240 90 0 0 clk
 port 0 nsew signal input

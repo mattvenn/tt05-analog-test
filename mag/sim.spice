@@ -1,8 +1,6 @@
-* this file edited to remove everything not in tt lib
+* divider
 .lib "sky130.lib.spice" tt
-* .lib "divider.spice"
-
-
+.include "../lvs/netlist/tt_um_matt_divider_test.spice"
 
 * instantiate, add VGND for VSUBS
 Xcell  clk ena rst_n ui_in[0] ui_in[1] ui_in[2] ui_in[3]
@@ -10,32 +8,7 @@ Xcell  clk ena rst_n ui_in[0] ui_in[1] ui_in[2] ui_in[3]
 + uio_in[5] uio_in[6] uio_in[7] uio_oe[0] uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4]
 + uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0] uio_out[1] uio_out[2] uio_out[3] uio_out[4]
 + uio_out[5] uio_out[6] uio_out[7] uo_out[0] uo_out[1] uo_out[2] uo_out[3] uo_out[4]
-+ uo_out[5] uo_out[6] uo_out[7] VPWR VGND VGND tt_um_matt_divider_test 
-
-
-
-.subckt sky130_fd_pr__res_xhigh_po_0p35_K7MYC6 a_n35_n482# a_n35_50# VSUBS
-X0 a_n35_n482# a_n35_50# VSUBS sky130_fd_pr__res_xhigh_po_0p35 l=500000u
-.ends
-
-.subckt divider 5 4 3 2 1 VSUBS
-Xsky130_fd_pr__res_xhigh_po_0p35_K7MYC6_0 1 2 VSUBS sky130_fd_pr__res_xhigh_po_0p35_K7MYC6
-Xsky130_fd_pr__res_xhigh_po_0p35_K7MYC6_1 3 2 VSUBS sky130_fd_pr__res_xhigh_po_0p35_K7MYC6
-Xsky130_fd_pr__res_xhigh_po_0p35_K7MYC6_2 3 4 VSUBS sky130_fd_pr__res_xhigh_po_0p35_K7MYC6
-Xsky130_fd_pr__res_xhigh_po_0p35_K7MYC6_3 5 4 VSUBS sky130_fd_pr__res_xhigh_po_0p35_K7MYC6
-.ends
-
-* had to add VSUBS to the end of the port list
-.subckt tt_um_matt_divider_test clk ena rst_n ui_in[0] ui_in[1] ui_in[2] ui_in[3]
-+ ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0] uio_in[1] uio_in[2] uio_in[3] uio_in[4]
-+ uio_in[5] uio_in[6] uio_in[7] uio_oe[0] uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4]
-+ uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0] uio_out[1] uio_out[2] uio_out[3] uio_out[4]
-+ uio_out[5] uio_out[6] uio_out[7] uo_out[0] uo_out[1] uo_out[2] uo_out[3] uo_out[4]
-+ uo_out[5] uo_out[6] uo_out[7] VPWR VGND VSUBS
-Xdivider_1 VGND uo_out[0] uo_out[1] uo_out[2] VPWR VSUBS divider
-.ends
-
-
++ uo_out[5] uo_out[6] uo_out[7] VPWR VGND tt_um_matt_divider_test 
 
 * set gnd and power
 Vgnd VGND 0 0
